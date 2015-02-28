@@ -3,12 +3,14 @@
     <h3>Users</h3>
     <div class="column">
       <table class="table">
+        <thead>
+          <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">Email</th>
+          </tr>
+        </thead>
         <tbody>
-          <% @users.each do |user| %>
-            <tr>
-              <%= render user %>
-            </tr>
-          <% end %>
+          <%= render(@users) %>
         </tbody>
       </table>
     </div>
