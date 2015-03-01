@@ -1,2 +1,6 @@
+<% if current_user && !current_user.name.blank? %>
+  <%= javascript_tag %(display_name('#{current_user.name}')) %>
+<% end %>
+
 <h3>Welcome</h3>
 <p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
