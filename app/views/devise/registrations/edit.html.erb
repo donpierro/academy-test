@@ -13,6 +13,12 @@
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
     </div>
+    <% unless @cities.empty? %>
+      <div class="form-group">
+        <%= f.label :city_id %>
+        <%= f.select(:city_id, @cities.pluck(:name, :id) , { include_blank: true }, class: 'form-control') %>
+      </div>
+    <% end %>
     <div class="form-group">
       <%= f.label :age %>
       <%= f.number_field :age, class: 'form-control' %>
