@@ -1,0 +1,27 @@
+<div class="container">
+  <h3>Cities</h3>
+
+  <div class="row">
+    <div class="col-md-12 col-md-offset-5">
+      <%= button_to 'Add new city', new_city_path, method: :get, type: "button", 
+        class: "btn btn-primary btn-xs" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Short name</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render(@cities) || render('empty') %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
