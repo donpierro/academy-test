@@ -7,6 +7,6 @@ class City < ActiveRecord::Base
   validates :short_name, presence: true
 
   def capitalize_name
-    self.name.capitalize!
+    self.name[0] = self.name[0].capitalize
   end
 end
